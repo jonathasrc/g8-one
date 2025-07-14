@@ -1,0 +1,7 @@
+ALTER TABLE patient
+CHANGE COLUMN logradouro public_place VARCHAR(100) NOT NULL,
+CHANGE COLUMN bairro neighborhood VARCHAR(100) NOT NULL,
+CHANGE COLUMN cep zip_code VARCHAR(9) NOT NULL,
+CHANGE COLUMN cidade city VARCHAR(100) NOT NULL,
+CHANGE COLUMN numero number VARCHAR(20),
+CHANGE COLUMN complemento complement VARCHAR(100);
