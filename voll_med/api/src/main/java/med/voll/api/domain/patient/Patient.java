@@ -1,12 +1,11 @@
-package med.voll.api.patient;
+package med.voll.api.domain.patient;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.Address.Address;
+import med.voll.api.domain.Address.Address;
 
 @Table(name = "patient")
 @Entity(name = "patient")
@@ -29,6 +28,7 @@ public class Patient {
     private Boolean active;
 
     public Patient(PatientDTO patientDTO) {
+        this.active = true;
         this.name = patientDTO.nome();
         this.email = patientDTO.email();
         this.telephone = patientDTO.telefone();
