@@ -1,4 +1,4 @@
-package med.voll.api.medical;
+package med.voll.api.domain.medical;
 
 public record MedicalList(Long id, String nome, String email, String crm, SpecialityMedical especialidade ) {
 
